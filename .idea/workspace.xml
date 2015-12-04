@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aa9e2ab1-df3c-4ed3-8fd2-79bb2a6aeec5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/websocket-bench" afterPath="$PROJECT_DIR$/websocket-bench" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="websocket-bench.iws" />
     <ignored path=".idea/workspace.xml" />
