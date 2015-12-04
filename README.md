@@ -1,6 +1,6 @@
 #Result
-![socket.io benchmark](https://github.com/atyenoria/websocket-socket.io-benchmark/blob/master/socket.io.png)
-![socket.io benchmark](https://github.com/atyenoria/websocket-socket.io-benchmark/blob/master/golang.png)
+
+![socket.io benchmark](https://github.com/atyenoria/websocket-socket.io-benchmark/blob/master/graph1.png)
 
 
 
