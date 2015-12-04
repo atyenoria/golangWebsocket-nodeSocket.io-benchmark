@@ -1,6 +1,5 @@
 #Method
-Once per 1 second, client socket.io  test library send socket.io connection ,which is specific conncurrencies parameter, to socket.io servers.  
-
+Once per 1 second, client socket.io  test library activates socket.io connection which is specific conncurrency parameter. 
 ##Tested Plaformed
 [~/work2/chat/websocket-bench]$ system_profiler SPHardwareDataType                                                                                                     *[master]
 Hardware:
