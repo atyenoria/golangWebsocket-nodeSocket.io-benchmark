@@ -1,5 +1,7 @@
 #Result
-![socket.io benchmark](https://github.com/atyenoria/websocket-socket.io-benchmark/graph1.png)
+![socket.io benchmark](https://github.com/atyenoria/websocket-socket.io-benchmark/blob/master/socket.io.png)
+![socket.io benchmark](https://github.com/atyenoria/websocket-socket.io-benchmark/blob/master/golang.png)
+
 
 
 
@@ -20,6 +22,5 @@ websocket-bench -a 200 -c 20 ws://localhost:5000
  
 #References
 https://github.com/M6Web/websocket-bench
-
 
 

@@ -8,19 +8,19 @@ import numpy as np
 from matplotlib.legend_handler import HandlerLine2D
 import matplotlib.lines as mlines
 
-csv = np.genfromtxt ('./3000_output.csv', delimiter=",")
+csv = np.genfromtxt ('./5000_output.csv', delimiter=",")
 second = csv[:,2]
 third = csv[:,6]
 x=second[0:10]
 
 
-y1=third[0:10]
+y1=third[0:]
 c1="Concurrency="+str(second[1])
-y2=third[11:21]
-c2="Concurrency="+str(second[11])
-
-y3=third[21:31]
-c3="Concurrency="+str(second[21])
+# y2=third[11:21]
+# c2="Concurrency="+str(second[11])
+#
+# y3=third[21:31]
+# c3="Concurrency="+str(second[21])
 
 a1 = mlines.Line2D([], [], color='blue', marker='*',
                           markersize=15, label=c1)
@@ -35,19 +35,19 @@ a4 = mlines.Line2D([], [], color='yellow', marker='*',
 
 # pl.legend(handles=[a1,a2])
 line1, = pl.plot(x,y1 ,marker='o', label=c1)
-line2, = pl.plot(x,y2 ,marker='o', label=c2)
-line2, = pl.plot(x,y3 ,marker='o', label=c3)
+# line2, = pl.plot(x,y2 ,marker='o', label=c2)
+# line2, = pl.plot(x,y3 ,marker='o', label=c3)
 
 pl.legend(handler_map={line1: HandlerLine2D(numpoints=4)})
 
 
 
 
-pl.xlim([0, 1000])
-pl.ylim([0, 100000])
-pl.title("Node.js Socket.io Performance", fontsize = 20)
+pl.xlim([0, 500])
+pl.ylim([0, 50000])
+pl.title("Golang Socket.io Performance(I removed failed request)", fontsize = 20)
 pl.xlabel("Total Connections (times)")
 pl.ylabel("Round Trip Duration Time (ms)")
-pl.savefig("graph1.png")
+pl.savefig("golang.png")
 pl.show()
 
