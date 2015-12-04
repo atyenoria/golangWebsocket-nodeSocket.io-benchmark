@@ -1,5 +1,5 @@
 #Method
-Once per 1 second, client socket.io  test library send socket.io connections which is about simulatneous conncurrencies numbers.  
+Once per 1 second, client socket.io  test library send socket.io connections,which is about simulatneous conncurrencies numbers, to socket.io servers.  
 
 ##Tested Plaformed
 [~/work2/chat/websocket-bench]$ system_profiler SPHardwareDataType                                                                                                     *[master]
