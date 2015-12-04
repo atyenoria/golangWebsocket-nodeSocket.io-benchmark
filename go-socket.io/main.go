@@ -12,8 +12,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	count := 1
+
 	server.On("connection", func(so socketio.Socket) {
-		log.Println("on connection")
+		count++
+		log.Println("connect :", count)
 
 		so.On("test", func(msg string) {
 			log.Println(msg)
