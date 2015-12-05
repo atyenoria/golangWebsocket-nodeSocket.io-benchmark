@@ -5,7 +5,7 @@ C=20 #concurrency
 HOST=$1
 OUTPUT=${HOST}_output.csv
 
-pushd websocket-bench > /dev/null
+pushd websocket-bench-library > /dev/null
 echo "Concurrency,Number,Connections,Errors, Message Send,Message Fail,Duration(ms)" > $OUTPUT
 for (( i = 1; i < 5; i++ )); do # C
 for (( n = 1; n < 10; n++ )); do # A
