@@ -3,6 +3,7 @@
 A=50 #total connections
 C=20 #concurrency
 HOST=$1
+PORT=$2
 OUTPUT=${HOST}_output.csv
 
 pushd websocket-bench-library > /dev/null
@@ -15,7 +16,7 @@ AA=`expr $A \* $n`
 CC=`expr $C \* $i`
 
 echo -n "${CC}," >> $OUTPUT
-node  bin/websocket-bench -a ${AA} -c ${CC} ws://localhost:$HOST
+node  bin/websocket-bench -a ${AA} -c ${CC} ws://$HOST:$PORT
 cat result.txt >> $OUTPUT
 
 

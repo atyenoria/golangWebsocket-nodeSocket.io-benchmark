@@ -1,3 +1,4 @@
+# docker build -t go . && docker run -it go bash
 FROM buildpack-deps:wheezy-scm
 
 # gcc for cgo
@@ -17,6 +18,7 @@ RUN curl -fsSL "$GOLANG_DOWNLOAD_URL" -o golang.tar.gz \
     && tar -C /usr/local -xzf golang.tar.gz \
     && rm golang.tar.gz
 
+
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
@@ -24,3 +26,11 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
 
 COPY go-wrapper /usr/local/bin/
+
+COPY ./ $HOME
+
+RUN go get github.com/googollee/go-socket.io
+RUN go build main.go
+
+
+

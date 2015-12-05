@@ -1,0 +1,14 @@
+web:
+  build: .
+  volumes:
+    - "./:$HOME"
+  ports:
+    - "3000:3000"
+  links:
+    - "db:redis"
+  container_name: node
+  command: /bin/bash
+  tty: true
+
+db:
+  image: redis

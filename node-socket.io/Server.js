@@ -25,8 +25,11 @@ const server = app.listen(PORT, 'localhost', err => {
     console.log('************ Socket.io Server on port: %s ************', PORT);
 });
 
-const REDIS_HOST = 'localhost';
+
+
+const REDIS_HOST = process.env.REDIS_PORT_6379_TCP_ADDR;
 const REDIS_PORT = '6379';
+
 const io = require('socket.io')(server);
 const redis = require('redis').createClient;
 const adapter = require('socket.io-redis');
